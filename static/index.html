@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    {{ range $w := . }}
+    <div>
+        <h4> {{ $w.Website }} </h4>
+        {{ range $e := .Entries }}
+        <div><a href={{ $e.Url }}> {{ $e.Title }}</a></div>
+        {{end}}
+    </div>
+    {{ end }}
+</body>
+</html>
